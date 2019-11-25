@@ -9,7 +9,8 @@ License: http://creativecommons.org/licenses/by-nc-sa/4.0/
 """
 
 import os
-for root, dirs, files in os.walk('/Volumes/JMLF HD/Music', topdown=False):
+#If you are looking to delete empty folders in an external disk you may look for it on the Volumes folder, located in root
+for root, dirs, files in os.walk('/test_folder_with_too_many_folders', topdown=False):
    for name in dirs:
       print('Checking: ' + os.path.join(root, name))
       if len(os.listdir(os.path.join(root, name)) ) == 0 or os.listdir(os.path.join(root, name)) == ['.DS_Store']:
